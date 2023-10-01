@@ -53,6 +53,7 @@ fun LoginScreen(){
     ) {
         Header(Modifier.align(Alignment.TopEnd))
         Body(Modifier.align(Alignment.Center))
+        Footer(Modifier.align(Alignment.BottomCenter))
     }
 }
 
@@ -75,6 +76,45 @@ fun Body(modifier: Modifier) {
         LoginDivider()
         Spacer(modifier = Modifier.size(32.dp))
         SocialLogin()
+    }
+}
+
+@Composable
+fun Footer(modifier: Modifier) {
+    Column(
+        modifier = modifier.fillMaxWidth()
+    ) {
+        Divider(
+            modifier = Modifier
+                .height(1.dp)
+                .fillMaxWidth()
+                .background(Color(0xFFF9F9F9))
+        )
+        Spacer(modifier = Modifier.size(24.dp))
+        SingUp()
+        Spacer(modifier = Modifier.size(24.dp))
+    }
+}
+
+@Composable
+fun SingUp() {
+    Row(
+        modifier = Modifier.fillMaxWidth(),
+        horizontalArrangement = Arrangement.Center
+    ) {
+        Text(
+            text = "Don't have an account?",
+            color = Color(0xFFB5B5B5),
+            fontSize = 12.sp
+        )
+        Text(
+            text = "Sing up.",
+            color =  Color(0xFF4EABE9),
+            fontSize = 12.sp,
+            modifier = Modifier
+                .padding(horizontal = 8.dp),
+            fontWeight = FontWeight.SemiBold
+        )
     }
 }
 

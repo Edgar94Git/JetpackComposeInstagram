@@ -1,4 +1,4 @@
-package com.ereyes.jetpackcomposeinstagram
+package com.ereyes.jetpackcomposeinstagram.login
 
 import android.app.Activity
 import android.util.Patterns
@@ -47,6 +47,7 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.ereyes.jetpackcomposeinstagram.R
 
 /****
  * Project: JetpackComposeInstagram

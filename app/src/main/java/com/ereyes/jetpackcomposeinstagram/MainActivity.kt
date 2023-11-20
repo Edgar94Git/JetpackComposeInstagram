@@ -23,7 +23,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxWidth(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    LoginScreen()
+                    LoginScreen(LoginViewModel())
                 }
             }
         }

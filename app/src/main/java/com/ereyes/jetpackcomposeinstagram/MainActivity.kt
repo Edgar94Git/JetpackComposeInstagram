@@ -9,8 +9,8 @@ import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.ereyes.jetpackcomposeinstagram.login.LoginScreen
-import com.ereyes.jetpackcomposeinstagram.login.LoginViewModel
+import com.ereyes.jetpackcomposeinstagram.login.ui.LoginScreen
+import com.ereyes.jetpackcomposeinstagram.login.ui.LoginViewModel
 import com.ereyes.jetpackcomposeinstagram.ui.theme.JetpackComposeInstagramTheme
 
 class MainActivity : ComponentActivity() {

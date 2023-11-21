@@ -8,7 +8,9 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.ereyes.jetpackcomposeinstagram.login.domain.LoginUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 /****
  * Project: JetpackComposeInstagram
@@ -16,9 +18,11 @@ import kotlinx.coroutines.launch
  * Created by Edgar Reyes Gonzalez on 11/20/2023 at 9:16 AM
  * All rights reserved 2023.
  ****/
-class LoginViewModel: ViewModel() {
 
-    val loginUseCase = LoginUseCase()
+@HiltViewModel
+class LoginViewModel @Inject constructor(
+    private val loginUseCase: LoginUseCase
+): ViewModel() {
 
     private val _email: MutableLiveData<String> = MutableLiveData<String>()
     val email: LiveData<String> = _email

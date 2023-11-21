@@ -1,6 +1,7 @@
 package com.ereyes.jetpackcomposeinstagram.login.data
 
 import com.ereyes.jetpackcomposeinstagram.login.data.network.LoginService
+import javax.inject.Inject
 
 /****
  * Project: JetpackComposeInstagram
@@ -8,10 +9,9 @@ import com.ereyes.jetpackcomposeinstagram.login.data.network.LoginService
  * Created by Edgar Reyes Gonzalez on 11/20/2023 at 12:08 PM
  * All rights reserved 2023.
  ****/
-class LoginRepository {
-    private val api = LoginService()
+class LoginRepository @Inject constructor(private val loginService: LoginService) {
 
     suspend fun doLogin(user: String, password: String): Boolean{
-        return api.doLogin(user, password)
+        return loginService.doLogin(user, password)
     }
 }
